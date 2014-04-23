@@ -20,8 +20,4 @@ ActiveRecord::Schema.define(version: 20140422222605) do
     t.string "name"
   end
 
-  create_table "users", force: true do |t|
-    t.string "name"
-  end
-
 end

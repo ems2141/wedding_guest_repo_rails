@@ -5,14 +5,20 @@ feature 'welcome page' do
 
     visit '/'
 
-    click_on 'Register'
+    click_on 'Add Guest'
 
     fill_in 'user_name', with: "Ellie"
     click_on 'Submit'
 
-    save_and_open_page
+    expect(page).to have_content "Name: Ellie"
+save_and_open_page
+    click_on 'Add Guest'
 
-    expect(page).to have_content "Welcome, Ellie!"
+    fill_in 'user_name', with: "Sarah"
+    click_on 'Submit'
+
+    expect(page).to have_content "Name: Ellie"
+    expect(page).to have_content "Name: Sarah"
 
   end
 end

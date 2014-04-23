@@ -1,3 +1,6 @@
-Welcome, <%= @user.name if !@user.nil? %>!
-
-<a href="/registration">Register</a>
+<a href="/registration">Add Guest</a>
+<ul>
+  <% @guests.each do |guest| %>
+    <li>Name: <%= guest.name %></li>
+  <% end %>
+</ul>
