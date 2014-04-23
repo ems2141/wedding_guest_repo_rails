@@ -18,6 +18,12 @@ class RegistrationController < ApplicationController
     redirect_to '/'
   end
 
+  def delete
+    @guest = Guest.find(params[:id])
+    @guest.destroy
+    redirect_to '/'
+  end
+
   def create
     guest = Guest.create(name: params[:user_name])
     session[:user_id] = guest.id

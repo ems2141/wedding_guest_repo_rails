@@ -2,6 +2,7 @@
 <ul>
   <% @guests.each do |guest| %>
     <li>Name: <%= guest.name %>
-      <a href="/registration/<%=guest.id%>/edit">Edit</a></li>
+      <a href="/registration/<%=guest.id%>/edit">Edit</a>
+    <a href="/registration/<%=guest.id%>/delete">Delete</a></li>
   <% end %>
 </ul>

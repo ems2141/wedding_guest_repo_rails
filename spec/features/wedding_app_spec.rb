@@ -35,4 +35,19 @@ feature 'welcome page' do
 
     expect(page).to have_content "Name: Rachael"
   end
+
+  scenario 'allow user to delete a guest name' do
+    visit '/'
+
+    click_on 'Add Guest'
+
+    fill_in 'user_name', with: "Kaylee"
+    click_on 'Submit'
+
+    expect(page).to have_content "Name: Kaylee"
+    click_on 'Delete'
+
+    expect(page).to have_no_content "Name: Kaylee"
+
+  end
 end

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post '/registration', to: 'registration#create'
   get '/registration/:id/edit', to: 'registration#edit'
   put '/registration/:id', to: 'registration#update'
+  get '/registration/:id/delete', to: 'registration#delete'
 
 
   # Example of regular route:
