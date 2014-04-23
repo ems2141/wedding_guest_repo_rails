@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
   get '/registration', to: 'registration#new'
   post '/registration', to: 'registration#create'
+  get '/registration/:id/edit', to: 'registration#edit'
+  put '/registration/:id', to: 'registration#update'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
